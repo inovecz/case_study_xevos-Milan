@@ -94,6 +94,7 @@ export default {
 
   created() {
     this.fetchAllEmployee();
+    this.sortList('id');
   },
 
   methods: {
