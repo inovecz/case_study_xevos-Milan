@@ -93,8 +93,9 @@ export default {
   },
 
   created() {
-    this.fetchAllEmployee();
-    this.sortList('id');
+    this.fetchAllEmployee(),
+    this.sortList('id'),
+    this.sortedbyASC = true
   },
 
   methods: {
