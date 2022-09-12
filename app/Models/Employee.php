@@ -9,7 +9,11 @@ class Employee extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'jmeno', 'prijmeni', 'date'];
+    protected $fillable = ['id', 'jmeno', 'prijmeni', 'date', 'plat'];
+
+    protected $casts = [
+        'plat' => 'string',
+    ];
 
     public function getId()
     {
@@ -29,5 +33,10 @@ class Employee extends Model
     public function getDate()
     {
         return $this->date;
+    }
+
+    public function getSalary()
+    {
+        return $this->plat;
     }
 }

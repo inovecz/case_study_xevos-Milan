@@ -18,5 +18,13 @@ use Illuminate\Support\Facades\Route;
 }); */
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'EmployeeController@index')->name('employee.index');
-    Route::get('/store', 'EmployeeController@store')->name('employee.store');
+   /*  Route::get('/storeJson', 'EmployeeController@storeJson')->name('employee.storeJson'); */
+});
+
+Route::group(['namespace' => 'App\Http\Controllers\API', 'prefix' => 'api'], function () {
+    Route::get('/employees/all', 'EmployeeController@index')->name('api.employees.all');
+    Route::get('/employees/reload', 'EmployeeController@storeJson')->name('api.employees.storeJson');
+    Route::post('/employees/destroy/{id}', 'EmployeeController@destroy')->name('api.employees.destroy');
+    Route::post('/employees/update/{id}', 'EmployeeController@update')->name('api.employees.update');
+    Route::get('/employees/salaries', 'EmployeeController@storeSalaries')->name('api.employees.storeSalaries');
 });

@@ -38,7 +38,7 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeJson(Request $request)
     {
         $employeesJson = Http::get('https://xevos.store/domaci-ukol/Jmena.json')->json();
    
