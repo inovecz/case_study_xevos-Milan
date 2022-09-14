@@ -10,3 +10,5 @@ Instalace
 - npm install
 - php artisan migrate (vytvori a namigruje sqlite db)
 - php artisan serve
+
+V prohlížeči otevřít uvedenou IP adresu
