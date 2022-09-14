@@ -8,5 +8,5 @@ Predpoklady
 Instalace
 - composer install
 - npm install
-- php artisan migrate (vytvori a namigruje db)
+- php artisan migrate (vytvori a namigruje sqlite db)
 - php artisan serve
