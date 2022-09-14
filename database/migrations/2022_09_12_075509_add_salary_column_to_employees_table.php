@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('employees', function (Blueprint $table) {
-            $table->integer('plat')->after('date');
+            $table->integer('plat')->after('date')->nullable();
         });
     }
 
